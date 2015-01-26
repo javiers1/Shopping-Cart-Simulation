@@ -1,0 +1,43 @@
+README
+--------------------
+Created by Javier Sanchez 01-24-15
+An Example of Object-Oriented Design
+
+TO RUN
+--------------------
+Compile all .java files and run the Driver.java class.
+
+CODING PROBLEM
+--------------------
+See GenericCodingProblem.pdf file
+
+PROGRAM DESCRIPTION
+-------------------
+This program creates an input of shopping Items with characteristics
+and calculates taxes on the items, total tax paid, and grand total.
+
+Items can be taxed at higher rates if imported.
+Items can exempt from sales tax (and any other tax for that matter).
+Items can be taxed with multiple types of taxes.
+
+IMPLEMENTATION NOTES
+--------------------
+I centered the  focus of the program around the Taxing of Items.
+By using Object-Oriented Design Patterns, I created a program
+where new Taxes can be added easily into the program by way
+of the Decorator pattern.
+
+Description of Implementation Design:
+
+Items - carry characteristics and new Items can be instantiated
+Orders - carry multiple Items and are responsible for reporting Taxes
+Tax Calculator - responsible for traversing Items and adding corresponding Tax to Item price
+Tax Decorator Classes - responsible for adding Tax rates to Items by wrapping Items
+
+Of course, more features such as a Parser of File input can be made to
+instantiate Item instances, but I kept the focus on OO design.
+
+I wanted to keep the implementation as simple as I could, but some areas of 
+improvement that can be made would be to create Exempt Item Classes instead of
+enumerating (Yuck) exempt types. The Order class could also be broken up into a
+larger hierarchy, but, that would be overkill for this problem :) 
